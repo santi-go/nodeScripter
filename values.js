@@ -1,6 +1,5 @@
-exports.entry = {
-    iterableItems: [
-        "'Bull & Anchor, Ash Green'",
+exports.values = [
+        "'2nd Module and refactor'",
         "'Flyer, Chelmsford'",
         "'Harrier, Peterborough'",
         "'Jolly Scotchman (Sleaford)'",
@@ -136,26 +135,4 @@ exports.entry = {
         "'Shuttle & Loom, Darlington'",
         "'Wellington (Bury)'",
         "'Feathers, Maidstone'"
-    ],
-    parts: [
-        "(@SiteID, @Lang, @Device, 'group_100', ",
-        ", ",
-        ", NULL, 'belhaven', NULL),\n"
-    ],
-    reference: [
-        "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
-    ],
-    sequence : "parts[0]+sortNumber+parts[1]+el+parts[1]+el+parts[1]+el+parts[2]",
-    assambler: (e)  => {
-        let lines = [];
-
-        e.iterableItems.forEach((el, index) => {
-            let sortNumber = (index+1) + e.indexOffset;
-
-            lines.push(e.parts[0]+sortNumber+e.parts[1]+el+e.parts[1]+el+e.parts[1]+el+e.parts[2]);
-        });
-        
-        return lines;
-    },
-    indexOffset: 0
-}
+    ];

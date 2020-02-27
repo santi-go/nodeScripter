@@ -1,5 +1,5 @@
 let fs = require('fs');
-let dt = require('./entry')
+let dt = require('./multiChoiceAnswers')
 
 function printer(e) {
     let data = packer(e);
@@ -11,9 +11,9 @@ function printer(e) {
 }
 
 function packer(e) {
-    let package = dt.entry.assambler(e);
+    let package = dt.multiChoiceAnswers.assambler(e);
     
     return package.join("");
 }
 
-printer(dt.entry);
+printer(dt.multiChoiceAnswers);
