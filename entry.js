@@ -1,4 +1,4 @@
-let entry = {
+exports.entry = {
     iterableItems: [
         "'Bull & Anchor, Ash Green'",
         "'Flyer, Chelmsford'",
@@ -145,5 +145,17 @@ let entry = {
     reference: [
         "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
     ],
-    code : "parts[0]+sortNumber+parts[1]+el+parts[1]+el+parts[1]+el+parts[2]"
+    sequence : "parts[0]+sortNumber+parts[1]+el+parts[1]+el+parts[1]+el+parts[2]",
+    assambler: (e)  => {
+        let lines = [];
+
+        e.iterableItems.forEach((el, index) => {
+            let sortNumber = (index+1) + e.indexOffset;
+
+            lines.push(e.parts[0]+sortNumber+e.parts[1]+el+e.parts[1]+el+e.parts[1]+el+e.parts[2]);
+        });
+        
+        return lines;
+    },
+    indexOffset: 0
 }
