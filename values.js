@@ -1,5 +1,5 @@
 exports.values = [
-        "'2nd Module and refactor'",
+        "'3rd Module , 2nd Config'",
         "'Flyer, Chelmsford'",
         "'Harrier, Peterborough'",
         "'Jolly Scotchman (Sleaford)'",

@@ -1,5 +1,6 @@
 let fs = require('fs');
-let dt = require('./multiChoiceAnswers')
+let mca = require('./multiChoiceAnswers')
+let iu = require('./insertUsers')
 
 function printer(e) {
     let data = packer(e);
@@ -11,9 +12,11 @@ function printer(e) {
 }
 
 function packer(e) {
-    let package = dt.multiChoiceAnswers.assambler(e);
+    let package = e.assambler(e);
     
     return package.join("");
 }
 
-printer(dt.multiChoiceAnswers);
+//printer(mca.multiChoiceAnswers);
+
+printer(iu.insertUsers);
