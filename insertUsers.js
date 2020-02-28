@@ -16,9 +16,7 @@ exports.insertUsers = {
     assambler: (e)  => {
         let lines = [];
 
-        e.values.forEach((el, index) => {
-            let sortNumber = (index+1) + e.indexOffset;
-
+        e.values.forEach((el) => {
             lines.push(e.parts[0]+e.userName+e.parts[1]+el+e.parts[2]+el+e.parts[3]+el+e.parts[4]);
         });
         
