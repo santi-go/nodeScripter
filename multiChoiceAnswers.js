@@ -17,6 +17,7 @@ exports.multiChoiceAnswers = {
 
         e.values.forEach((el, index) => {
             let sortNumber = (index+1) + e.indexOffset;
+            el = "'"+el+"'";
             
             lines.push(e.parts[0]+sortNumber+e.parts[1]+el+e.parts[1]+el+e.parts[1]+el+e.parts[2]);
         });

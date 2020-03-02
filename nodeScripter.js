@@ -25,9 +25,14 @@ function packer() {
 }
 
 function tranmute() {
-    let stone = fs.readFileSync('./raw.txt', 'utf-8').split("\n");
+    let led = fs.readFileSync('./raw.txt', 'utf-8').split("\n");
+    let gold =[];
 
-    return stone;
+    led.forEach(el => {
+        gold.push('"'+el+'"');
+    })
+    console.log(gold)
+    return gold;
 }
 
 function createValues (v, e) {
