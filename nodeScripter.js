@@ -21,23 +21,35 @@ function assembler(e) {
 
 function packer() {
     let values = tranmute();
-    createValues(values, vs.createValues);
+    //createValues(values, vs.createValues);
 }
 
 function tranmute() {
     let led = fs.readFileSync('./raw.txt', 'utf-8').split("\n");
     let gold =[];
+    let parts = [
+        "exports.values = [",
+        "];"
+    ];
 
     led.forEach(el => {
         gold.push('"'+el+'"');
     })
-    console.log(gold)
-    return gold;
-}
 
-function createValues (v, e) {
-    return vs.createValues.assambler(v, e);
-}
+    gold.pop();
+    let script = gold.toString()
+
+    let data = parts[0]+script+parts[1];
+
+    fs.writeFile('proccesed/values.js', data, (err) => {
+        if(err) return console.log(err);
+        console.log('values.js - Created Successfully!');
+    });
+ }
+
+// function createValues (v, e) {
+//     return vs.createValues.assambler(v, e);
+// }
 
 printer(mca.multiChoiceAnswers);
 

@@ -607,4 +607,3 @@
 (@SiteID, @Lang, @Device, 'group_100', 607, 'West End Brewery (West End)', 'West End Brewery (West End)', 'West End Brewery (West End)', NULL, 'belhaven', NULL),
 (@SiteID, @Lang, @Device, 'group_100', 608, 'Welcome (Eastleigh)', 'Welcome (Eastleigh)', 'Welcome (Eastleigh)', NULL, 'belhaven', NULL),
 (@SiteID, @Lang, @Device, 'group_100', 609, 'Footman (Mayfair)', 'Footman (Mayfair)', 'Footman (Mayfair)', NULL, 'belhaven', NULL),
-(@SiteID, @Lang, @Device, 'group_100', 610, '', '', '', NULL, 'belhaven', NULL),
