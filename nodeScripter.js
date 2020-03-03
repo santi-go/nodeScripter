@@ -20,6 +20,7 @@ function assembler(e) {
 
 function tranmute() {
     let led = fs.readFileSync('./raw.txt', 'utf-8').split("\n");
+    
     let gold =[];
     let parts = [
         "exports.values = [",
@@ -27,12 +28,13 @@ function tranmute() {
     ];
 
     led.forEach(el => {
+        el = el.slice(0,-1)
         gold.push('"'+el+'"');
     })
-
-    gold.pop();
+    
+    //gold.pop();
     let script = gold.toString()
-
+    console.log(script);
     let data = parts[0]+script+parts[1];
 
     fs.writeFile('proccesed/values.js', data, (err) => {

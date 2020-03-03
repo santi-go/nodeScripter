@@ -5,7 +5,7 @@ exports.multiChoiceAnswers = {
     parts: [
         "(@SiteID, @Lang, @Device, 'group_100', ",
         ", ",
-        ", NULL, 'belhaven', NULL),\n"
+        ", NULL, 'chefandbrewer-', NULL),\n"
     ],
     reference: [
         "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
