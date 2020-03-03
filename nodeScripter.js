@@ -32,9 +32,7 @@ function tranmute() {
         gold.push('"'+el+'"');
     })
     
-    //gold.pop();
     let script = gold.toString()
-    console.log(script);
     let data = parts[0]+script+parts[1];
 
     fs.writeFile('proccesed/values.js', data, (err) => {
@@ -43,6 +41,6 @@ function tranmute() {
     });
  }
 
-printer(mca.multiChoiceAnswers);
+//printer(mca.multiChoiceAnswers);
 
-//printer(iu.insertUsers);
+printer(iu.insertUsers);

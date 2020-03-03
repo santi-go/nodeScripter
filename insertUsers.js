@@ -1,4 +1,4 @@
-let dt = require('./values')
+let dt = require('./proccesed/values')
 
 exports.insertUsers = {
     values: dt.values,
@@ -17,11 +17,12 @@ exports.insertUsers = {
         let lines = [];
 
         e.values.forEach((el) => {
+            el = "'"+el+"'";
             lines.push(e.parts[0]+e.userName+e.parts[1]+el+e.parts[2]+el+e.parts[3]+el+e.parts[4]);
         });
         
         return lines;
     },
     indexOffset: 0,
-    userName: "'Belhaven'"
+    userName: "'Pub & Dining'"
 }
