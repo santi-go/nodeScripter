@@ -1,4 +1,4 @@
-let dt = require('./proccesed/values')
+let dt = require('./processed/values')
 
 exports.multiChoiceAnswers = {
     values: dt.values,
