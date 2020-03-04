@@ -24,5 +24,5 @@ exports.insertUsers = {
         return lines;
     },
     indexOffset: 0,
-    userName: "'Pub & Dining'"
+    userName: "'Farmhouse Inns'"
 }
