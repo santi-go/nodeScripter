@@ -3,16 +3,15 @@ let mca = require('./multiChoiceAnswers')
 let iu = require('./insertUsers')
 
 function printer(e) {
-    rawToModule()
-    let data = assembler(e);
-    
-    createfile('processed/script.sql', data);
+    if(rawToModule()) {
+        createfile('processed/script.sql', assembler(e));
+    } else {
+        console.log("Somenthing went wrong :(")
+    }   
 }
 
 function assembler(e) {
-    let assembled = e.assambler(e);
-    
-    return assembled.join("");
+    return e.assambler(e).join("");
 }
 
 function rawToModule() {
@@ -32,7 +31,13 @@ function rawToModule() {
     
     script = formatted.toString()
     data = parts[0]+script+parts[1];
-    createfile ('processed/values.js', data);
+    
+    if(data.length > 20) {
+        createfile ('processed/values.js', data);
+        return true;
+    } else {
+        return false;
+    }  
  }
 
  function createfile(path, data) {
@@ -42,8 +47,8 @@ function rawToModule() {
     });
  }
 
-printer(mca.multiChoiceAnswers);
+//printer(mca.multiChoiceAnswers);
 
-//printer(iu.insertUsers);
+printer(iu.insertUsers);
 
 
