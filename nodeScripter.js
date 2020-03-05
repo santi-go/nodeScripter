@@ -6,11 +6,12 @@ function printer(e) {
     if(rawToModule()) {
         createfile('processed/script.sql', assembler(e));
     } else {
-        console.log("Somenthing went wrong :(")
+        console.log("Something went wrong :(")
     }   
 }
 
 function assembler(e) {
+    // crear una propiedad type | paths
     return e.assambler(e).join("");
 }
 

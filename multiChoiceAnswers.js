@@ -10,8 +10,8 @@ exports.multiChoiceAnswers = {
     reference: [
         "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
     ],
-    sequence : "parts[0]+sortNumber+parts[1]+el+parts[1]+el+parts[1]+el+parts[2]",
     indexOffset: 1595,
+    type: "join",
     assambler: (e)  => {
         let lines = [];
 
