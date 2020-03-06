@@ -14,7 +14,7 @@ exports.insertUsers = {
     ],
     indexOffset: 0,
     userName: "'Farmhouse Inns'",
-    type: "join",
+    type: "sql",
     assambler: (e)  => {
         let lines = [];
 

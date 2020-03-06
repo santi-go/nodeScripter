@@ -11,7 +11,7 @@ exports.multiChoiceAnswers = {
         "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
     ],
     indexOffset: 1595,
-    type: "join",
+    type: "sql",
     assambler: (e)  => {
         let lines = [];
 

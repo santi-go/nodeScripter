@@ -1,18 +1,30 @@
 let fs = require('fs');
-let mca = require('./multiChoiceAnswers')
-let iu = require('./insertUsers')
+let mca = require('./multiChoiceAnswers');
+let iu = require('./insertUsers');
+let cvm = require('./cbValueMapping');
 
 function printer(e) {
+    let scriptName = "";
+
+    if(e.type == "sql") {
+        scriptName = "processed/script.sql";
+    } else {
+        scriptName = "processed/values.txt"
+    }
+    
     if(rawToModule()) {
-        createfile('processed/script.sql', assembler(e));
+        createfile(scriptName, assembler(e));
     } else {
         console.log("Something went wrong :(")
     }   
 }
 
 function assembler(e) {
-    // crear una propiedad type | paths
-    return e.assambler(e).join("");
+    if(e.type == "sql") {
+        return e.assambler(e).join("");
+    }
+
+    return e.assambler(e);
 }
 
 function rawToModule() {
@@ -49,7 +61,7 @@ function rawToModule() {
  }
 
 //printer(mca.multiChoiceAnswers);
-
-printer(iu.insertUsers);
+//printer(iu.insertUsers);
+printer(cvm.cbValueMapping)
 
 
