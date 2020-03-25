@@ -1,12 +1,15 @@
 let fs = require('fs');
 let mca = require('./multiChoiceAnswers')
 let iu = require('./insertUsers')
+let cm = require('./cbMapper');
+let us = require('./updateUsers');
+let ipc = require('./insertPubCode');
 
 function printer(e) {
     if(rawToModule()) {
         createfile('processed/script.sql', assembler(e));
     } else {
-        console.log("Somenthing went wrong :(")
+        console.log("Something went wrong :(")
     }   
 }
 
@@ -31,7 +34,7 @@ function rawToModule() {
     
     script = formatted.toString()
     data = parts[0]+script+parts[1];
-    
+
     if(data.length > 20) {
         createfile ('processed/values.js', data);
         return true;
@@ -51,4 +54,8 @@ function rawToModule() {
 
 printer(iu.insertUsers);
 
+//printer(cm.cbMapper);
 
+//printer(us.updateUsers);
+
+//printer(ipc.insertPubCode);
