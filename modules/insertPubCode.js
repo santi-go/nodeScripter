@@ -1,7 +1,5 @@
-let dt = require('../samples/values')
-
 exports.insertPubCode = {
-    values: dt.values,
+    values: [],
     formattedLocations: [],
     parts: [
         "('",

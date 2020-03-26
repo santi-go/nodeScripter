@@ -1,7 +1,5 @@
-let values = require('../samples/values').values;
-
 exports.cbMapper = {
-    values : values,
+    values : [],
     assambler: (e) => {
         let formattedLocations =[];
             

@@ -1,17 +1,11 @@
-let dt = require('../samples/values')
-
 exports.multiChoiceAnswers = {
-    values: dt.values,
+    values: [],
     parts: [
         "(@SiteID, @Lang, @Device, 'group_100', ",
         ", ",
         ", NULL, 'farmhouseinns-', NULL),\n"
     ],
-    reference: [
-        "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
-    ],
-    sequence : "parts[0]+sortNumber+parts[1]+el+parts[1]+el+parts[1]+el+parts[2]",
-    indexOffset: 1595,
+    indexOffset: 0,
     assambler: (e)  => {
         let lines = [];
 
@@ -23,5 +17,8 @@ exports.multiChoiceAnswers = {
         });
         
         return lines;
-    }  
+    },
+    reference: "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
+    
+      
 }

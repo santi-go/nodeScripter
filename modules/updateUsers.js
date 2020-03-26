@@ -1,7 +1,5 @@
-let dt = require('../samples/values')
-
 exports.updateUsers = {
-    values: dt.values,
+    values: [],
     formattedLocations: [],
     parts: [
         "UPDATE Locations SET DashboardName = '",

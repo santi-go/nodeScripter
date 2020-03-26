@@ -6,42 +6,25 @@ let us = require('./modules/updateUsers');
 let ipc = require('./modules/insertPubCode');
 
 function printer(e) {
-    if(rawToModule()) {
-        createfile('processed/script.sql', assembler(e));
-    } else {
-        console.log("Something went wrong :(")
-    }   
+    e.values = rawToArray();
+    createfile('processed/script.sql', assembler(e)); 
 }
 
 function assembler(e) {
     return e.assambler(e).join("");
 }
 
-function rawToModule() {
+function rawToArray() {
     let raw = fs.readFileSync('./samples/raw.txt', 'utf-8').split("\n");
     let formatted =[];
-    let script = "";
-    let data = "";
-    let parts = [
-        "exports.values = [",
-        "];"
-    ];
 
     raw.forEach(el => {
         el = el.slice(0,-1)
         formatted.push('"'+el+'"');
     })
     
-    script = formatted.toString()
-    data = parts[0]+script+parts[1];
-
-    if(data.length > 20) {
-        createfile('samples/values.js', data);//devuelve true y aún no crea el values.js, esto no sirve.
-        return true;
-    } else {
-        return false;
-    }  
- }
+    return formatted; 
+}
 
  function createfile(path, data) {
     try {
@@ -55,9 +38,9 @@ function rawToModule() {
     }
  }
 
-//printer(mca.multiChoiceAnswers);
+printer(mca.multiChoiceAnswers);
 
-printer(iu.insertUsers);
+//printer(iu.insertUsers);
 
 //printer(cm.cbMapper);
 

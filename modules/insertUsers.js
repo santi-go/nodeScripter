@@ -1,7 +1,5 @@
-let dt = require('../samples/values')
-
 exports.insertUsers = {
-    values: dt.values,
+    values: [],
     formattedLocations: [],
     parts: [
         "(GETUTCDATE(), @SiteID, (SELECT RegionId FROM Regions WHERE SiteID = @SiteID AND DashboardName = 'Default Region'), (SELECT UserId FROM Users WHERE SiteID = @SiteID AND Username = '",
