@@ -1,4 +1,4 @@
-let dt = require('./processed/values')
+let dt = require('../samples/values')
 
 exports.insertPubCode = {
     values: dt.values,

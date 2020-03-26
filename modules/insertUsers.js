@@ -1,4 +1,4 @@
-let dt = require('./processed/values')
+let dt = require('../samples/values')
 
 exports.insertUsers = {
     values: dt.values,

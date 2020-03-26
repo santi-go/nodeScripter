@@ -1,9 +1,9 @@
 let fs = require('fs');
-let mca = require('./multiChoiceAnswers')
-let iu = require('./insertUsers')
-let cm = require('./cbMapper');
-let us = require('./updateUsers');
-let ipc = require('./insertPubCode');
+let mca = require('./modules/multiChoiceAnswers')
+let iu = require('./modules/insertUsers')
+let cm = require('./modules/cbMapper');
+let us = require('./modules/updateUsers');
+let ipc = require('./modules/insertPubCode');
 
 function printer(e) {
     if(rawToModule()) {
@@ -18,7 +18,7 @@ function assembler(e) {
 }
 
 function rawToModule() {
-    let raw = fs.readFileSync('./raw.txt', 'utf-8').split("\n");
+    let raw = fs.readFileSync('./samples/raw.txt', 'utf-8').split("\n");
     let formatted =[];
     let script = "";
     let data = "";
@@ -36,7 +36,7 @@ function rawToModule() {
     data = parts[0]+script+parts[1];
 
     if(data.length > 20) {
-        createfile ('processed/values.js', data);
+        createfile('samples/values.js', data);//devuelve true y aún no crea el values.js, esto no sirve.
         return true;
     } else {
         return false;
@@ -44,10 +44,15 @@ function rawToModule() {
  }
 
  function createfile(path, data) {
-    fs.writeFile(path, data, (err) => {
-        if(err) return console.log(err);
-        console.log(path+' - Created Successfully!');
-    });
+    try {
+        fs.writeFile(path, data, (err) => {
+            if(err) return console.log(err);
+            console.log(path+' - Created Successfully!');
+        });
+    } catch (error) {
+        console.log(error);
+        
+    }
  }
 
 //printer(mca.multiChoiceAnswers);

@@ -1,4 +1,4 @@
-let values = require('./processed/values').values;
+let values = require('../samples/values').values;
 
 exports.cbMapper = {
     values : values,
