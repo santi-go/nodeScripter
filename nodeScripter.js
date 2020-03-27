@@ -4,14 +4,11 @@ let iu = require('./modules/insertUsers')
 let cm = require('./modules/cbMapper');
 let us = require('./modules/updateUsers');
 let ipc = require('./modules/insertPubCode');
+let chosenModule = process.argv.slice(2).toString();
 
 function printer(e) {
     e.values = rawToArray();
     createfile('processed/script.sql', assembler(e)); 
-}
-
-function assembler(e) {
-    return e.assambler(e).join("");
 }
 
 function rawToArray() {
@@ -26,24 +23,37 @@ function rawToArray() {
     return formatted; 
 }
 
- function createfile(path, data) {
-    try {
-        fs.writeFile(path, data, (err) => {
-            if(err) return console.log(err);
-            console.log(path+' - Created Successfully!');
-        });
-    } catch (error) {
-        console.log(error);
-        
-    }
+function createfile(path, data) {
+    fs.writeFile(path, data, (err) => {
+        if(err) return console.log(err);
+        console.log(path+' - Created Successfully!');
+    });
  }
 
-printer(mca.multiChoiceAnswers);
+function assembler(e) {
+    return e.assambler(e).join("");
+}
 
-//printer(iu.insertUsers);
+function nodeScripter(module) {
+    switch(module) {
+        case 'insert-users':
+            printer(iu.insertUsers);
+            break;
+        case 'multi-choice-answers':
+            printer(mca.multiChoiceAnswers);
+            break;
+        case 'insert-pub-code':
+            printer(ipc.insertPubCode);
+            break;
+        case 'cb-mapper':
+            printer(cm.cbMapper);
+            break;
+        case 'update-users':
+            printer(us.updateUsers);
+            break;
+        default:
+            console.log('Please enter a valid module name');        
+    }
+}
 
-//printer(cm.cbMapper);
-
-//printer(us.updateUsers);
-
-//printer(ipc.insertPubCode);
+nodeScripter(chosenModule);
