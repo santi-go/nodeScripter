@@ -1,11 +1,25 @@
 let fs = require('fs');
 
-let path = 'processed/chef.txt' 
-let chef = ["Abbey Fields (Kenilworth)	64787","Air Balloon (Birdlip)	64930","Ashlea (Cheadle)	64791","Axe & Cleaver (Dunham Massey)	64792","Bakers Arms (Sewardstone)	64793","Barley Mow (Clifton Hampden)	64794","Battle Axes (Elstree)	64795","Bear & Staff (Gateacre)	64796","Bear Inn (Berkswell)	64797","Berkshire Arms (Midgham)	64798","Blacksmiths Arms (Macclesfield)	64799","Blue Cap (Sandiway)	64800","Blundell Arms (Horwich)	64801","Boars Head (Herongate)	64802","Boat Inn (Catherine-De-Barnes)	64803","Boathouse (Peterborough)	64784","Boot & Slipper (Amersham)	64804","Bottle & Glass Inn (Rainford)	64805","Bridge (Shawford)	64807","Bridge (Waterbeach)	64806","Britannia (Northampton)	64808","Bull (Goring-By-Sea)	64809","Bulls Head (Chiswick)	64813","Bulls Head (Wilmslow)	64812","Butley Ash (Butley)	64814","Castle Hotel (Kirby Muxloe)	64815","Chequers Inn (Redbourn)	64816","Chiltern Hundreds (Maidstone)	64817","Cold Harbour (Blunsdon)	64818","Cross Keys (Norton Fitzwarren)	64922","Cross Keys (Upsall)	64819","Crossroads (Weedon)	64820","Crown Inn (Eaton Socon)	64822","Crown Inn (Penn)	64821","De Trafford Arms (Alderley Edge)	64823","Didsbury (Didsbury)	64824","Dog & Partridge (Tutbury)	64825","Dog House (Frilford Heath)	64788","Drum & Monkey (Dorridge)	64785","Ethorpe Hotel (Gerrards Cross)	64826","Fairmile (Fairmile)	64827","Feathers (Burnham)	64828","Ferry Inn (Wilford)	64829","Five Horseshoes (Little Berkhamsted	64830","Four Oaks (Sutton Coldfield)	64831","Fox & Hounds (Bursledon)	64833","Fox & Hounds (Longthorpe)	64832","Fox & Hounds (Wimborne)	64931","Fox Inn (Bransford)	64834","Garden House (Edgbaston)	64835","Gatwick Manor (Lowfield Heath)	64836","George Inn (Bathampton)	64838","George (Earley)	64837","Grange (Boreham)	64839","Grapes Hotel (Wrea Green)	64840","Green Man (Great Offley)	64842","Green Man (Harlow)	64841","Green Man Inn (Brackley Hatch)	64843","Greswolde Arms (Knowle)	64844","Greyhound (Milton Malsor)	64845","Griffin (Bold Heath)	64923","Griffin, (Caversham)	64846","Griffin (Bowdon)	64847","Halfway House (Baildon)	64789","Hare & Hounds Inn (Hyde)	64848","Hatch (Old Basing)	64849","Himley House (Himley)	64850","Hinderton Arms (Neston)	64851","Holly Bush (Lichfield)	64852","Homestead (Bracebridge Heath)	64924","Horse & Groom (Writtle)	64853","Hutt (Ravenshead)	64854","Kilton Inn (Hoo Green)	64856","Kings Arms (Sandford-On-Thames)	64857","Kings Head (Masham)	64858","Maenllwyd Inn (Rudry)	64859","Malthouse Farm (Whittle-Le-Woods)	64860","Mare & Colt (Summerfield)	64861","Mundy Arms (Mackworth)	64862","Nags Head (Burntwood)	64863","Old Bell (Grazeley Green)	64865","Old Bell (Harpenden)	64864","Old Bell (Oxted)	64866","Old Mill (Baginton)	64867","Old Mill (Brighouse)	64868","Peacock (Owler Bar)	64869","Peacock Inn (Forhill)	64870","Prince of Wales (Esher)	64871","Queens Head (Burley)	64932","Ravensworth Arms (Lamesley)	64872","Red Lion (Martlesham)	64873","Red Lion (Iver)	64874","Ring O’ Bells (Daresbury)	64875","Rising Sun Inn (Wistaston)	64786","Riverside Hotel (Branston)	64925","Robin Hood (Shripney)	64876","Roebuck (Bilsborrow)	64877","Romper (Ringway)	64878","Rose & Crown (Wick)	64879","Royal Oak (Farnham Common)	64880","Running Horse Inn (Bewdley)	64881","Rushcutters Arms (Thorpe St Andrew)	64882","Shepherds House (Warfield)	64883","Ship Inn (Alveston)	64884","Shipley Bridge (Burstow)	64885","Shire Horse (Littlewick Green)	64886","Shire Horse (Stafford)	64887","Shoulder of Mutton (Wendover)	64888","Smiths Arms (Beckwithshaw)	64889","Spencer Arms (Chapel Brampton)	64890","Stanley Gate (Bickerstaffe)	64891","Star Inn (Felbridge)	64892","Swan & Bottle (Uxbridge)	64895","Swan (Ash Vale)	64893","Swan (Winwick)	64894","Three Horse Shoes (Spellbrook)	64897","Tigers Head (Chislehurst)	64898","Travellers Rest (Mapperley)	64899","Two Brewers (Chipperfield)	64900","Vauxhall Inn (Tonbridge)	64902","Wateringbury (Wateringbury)	64903","Watermill Inn (Dorking)	64904","Waterwitch (Odiham)	64905","Wellington Hotel (Riding Mill)	64906","Wheatsheaf (North Waltham)	64908","Wheatsheaf Hotel (Virginia Water)	64907","Wheatsheaf (Burton Joyce)	64909","Wheatstone Inn (Gloucester)	64910","White Horse (Shere)	64912","White House (Roundhay)	64913","White Rabbit (Lyndhurst)	64915","Woodman (Blackpill)	64916","Ye Olde Leathern Bottel (Barkham)	64917","Ye Olde Swan (Woughton-On-The-Green	64918","Ye Olde Windsor Castle (Little Bookham)	64919","Yew Tree (Great Horkesley)	64920","Yews (Great Glen)	64921"]
+let path = 'processed/sorted.txt' 
+let chef = [];
 let data = []
 
+function rawToArray() {
+    let raw = fs.readFileSync('./samples/raw.txt', 'utf-8').split("\n");
+    let formatted =[];
+
+    raw.forEach(el => {
+        //el = el.slice(0,-1)
+        formatted.push(el);
+    })
+    
+    return formatted; 
+}
+
+chef = rawToArray();
+
 chef.sort().forEach( (e) => {
-    data.push(e+"\n");   
+    data.push(e);   
 })
 
 fs.writeFile(path, data, (err) => {

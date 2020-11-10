@@ -1,11 +1,13 @@
 exports.multiChoiceAnswers = {
     values: [],
     parts: [
-        "(@SiteID, @Lang, @Device, 'group_100', ",
+        "(@SiteID, @Lang, @Device, 'group_xxx', ",
         ", ",
-        ", NULL, 'farmhouseinns-', NULL),\n"
+        ", NULL, '",
+        "', NULL),\n"
     ],
-    indexOffset: 0,
+    tags: "Wisconsin",
+    indexOffset: 269,
     assambler: (e)  => {
         let lines = [];
 
@@ -13,12 +15,11 @@ exports.multiChoiceAnswers = {
             let sortNumber = (index+1) + e.indexOffset;
             el = "'"+el+"'";
             
-            lines.push(e.parts[0]+sortNumber+e.parts[1]+el+e.parts[1]+el+e.parts[1]+el+e.parts[2]);
+            lines.push(e.parts[0]+sortNumber+e.parts[1]+el+e.parts[1]+el+e.parts[1]+el+e.parts[2]+e.tags+e.parts[3]);
         });
         
         return lines;
-    },
-    reference: "(@SiteID, @Lang, @Device, 'group_100', 244, 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', 'Old Schoolhouse (Glasgow)', NULL, 'belhaven', NULL),"
+    }
     
       
 }

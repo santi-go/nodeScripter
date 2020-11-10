@@ -3,6 +3,7 @@ let mca = require('./modules/multiChoiceAnswers')
 let iu = require('./modules/insertUsers')
 let cm = require('./modules/cbMapper');
 let us = require('./modules/updateUsers');
+let ua = require('./modules/updateAnswers');
 let ipc = require('./modules/insertPubCode');
 let chosenModule = process.argv.slice(2).toString();
 
@@ -17,7 +18,8 @@ function rawToArray() {
 
     raw.forEach(el => {
         el = el.slice(0,-1)
-        formatted.push('"'+el+'"');
+        formatted.push(el);
+        //formatted.push('"'+el+'"');
     })
     
     return formatted; 
@@ -50,6 +52,9 @@ function nodeScripter(module) {
             break;
         case 'update-users':
             printer(us.updateUsers);
+            break;
+        case 'update-answers':
+            printer(ua.updateAnswers);
             break;
         default:
             console.log('Please enter a valid module name');        
