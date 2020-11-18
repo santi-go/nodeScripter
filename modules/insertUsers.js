@@ -2,10 +2,10 @@ exports.insertUsers = {
     values: [],
     formattedLocations: [],
     parts: [
-        "(GETUTCDATE(), @SiteID, @US_RegionID, @WI_UserID, N'",
+        "('2020-11-01 00:00:00.000', @SiteID, @RegionID, @UserID_Fronce, N'",
         "', N'",
         "', N'",
-        "', GETDATE(), 1, 1, 1, 1, 1, 0, '1900-01-01 00:00:00.000', 0, 0),\n"
+        "', '2020-08-01 00:00:00.000', 1, 1, 1, 1, 1, 0, '1900-01-01 00:00:00.000', 0, 0),\n"
     ],
     formatter: (e) => {
         e.values.forEach(el => {
