@@ -2,10 +2,9 @@ exports.insertUsers = {
     values: [],
     formattedLocations: [],
     parts: [
-        "('2020-11-01 00:00:00.000', @SiteID, @RegionID, @UserID_Fronce, N'",
+        "(@SiteID, 0, '2021-05-01 00:00:00.000', '2021-05-01 00:00:00.000', N'",
         "', N'",
-        "', N'",
-        "', '2020-08-01 00:00:00.000', 1, 1, 1, 1, 1, 0, '1900-01-01 00:00:00.000', 0, 0),\n"
+        "', N'franchisee', 1, 0, 0, 0, N'district', 0),\n"
     ],
     formatter: (e) => {
         e.values.forEach(el => {
@@ -20,9 +19,11 @@ exports.insertUsers = {
         let lines = [];
 
         values.forEach((el) => {
-            lines.push(e.parts[0]+el[0]+e.parts[1]+el[0]+e.parts[2]+el[0]+e.parts[3]);
+            lines.push(e.parts[0]+el[0]+e.parts[1]+el[0]+e.parts[2]);
         });
         
         return lines;
     }
 }
+
+//(@SiteID, 0, '2021-05-01 00:00:00.000', '2021-05-01 00:00:00.000', N'palceholder', N'palceholder', N'franchisee', 1, 0, 0, 0, N'district', 0)

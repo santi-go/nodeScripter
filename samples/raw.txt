@@ -1,91 +1,149 @@
-Alex.Young1@asu.edu	Amy Gordon
-Alex.Young1@asu.edu	Anissa Voron
-Alex.Young1@asu.edu	Candiece King
-Alex.Young1@asu.edu	Catherine Pinckney
-Alex.Young1@asu.edu	Chantell Rodgers
-Alex.Young1@asu.edu	Elise Pinkowski
-Alex.Young1@asu.edu	Johnny Monarrez
-Alex.Young1@asu.edu	Krystal Banner
-Alex.Young1@asu.edu	Rosa Baez
-Alex.Young1@asu.edu	Samantha Speltz
-Erica.Fuller@asu.edu	Alicia Wilson
-Erica.Fuller@asu.edu	Angela Hoffman
-Erica.Fuller@asu.edu	Angela Robles
-Erica.Fuller@asu.edu	Arnetta Courtney
-Erica.Fuller@asu.edu	Christopher Watts
-Erica.Fuller@asu.edu	Conorie Richmond
-Erica.Fuller@asu.edu	Debbie Woods
-Erica.Fuller@asu.edu	Gareth Boucher
-Erica.Fuller@asu.edu	Macho Cartagena
-Erica.Fuller@asu.edu	Nicole Richards
-Erica.Fuller@asu.edu	Ryan Conley
-Erin.Searle@asu.edu	Ashley Mendoza
-Erin.Searle@asu.edu	Aurora De Hoyos
-Erin.Searle@asu.edu	Cassandra Barbieri
-Erin.Searle@asu.edu	Cassidy Cantrell
-Erin.Searle@asu.edu	Danielle Carruth
-Erin.Searle@asu.edu	Edeleen Cotton
-Erin.Searle@asu.edu	Kevin Chaney
-Erin.Searle@asu.edu	Lynae Berryhill
-Erin.Searle@asu.edu	Meghan Fitzpatrick
-Erin.Searle@asu.edu	Mike Francis
-Erin.Searle@asu.edu	Nick Derry
-Justin.Glanton@asu.edu	Alejandra Anaya
-Justin.Glanton@asu.edu	Alyssa  Andreis
-Justin.Glanton@asu.edu	Jason Bradley
-Justin.Glanton@asu.edu	Meaghan Pulice
-Justin.Glanton@asu.edu	Melissa Alfaro
-Justin.Glanton@asu.edu	Monique Tsosie
-Justin.Glanton@asu.edu	Ricardo Llamas
-Kissa.Powell@asu.edu	Adriana Wilson
-Kissa.Powell@asu.edu	Alexandra "Ali" Baker
-Kissa.Powell@asu.edu	Christopher Williams
-Kissa.Powell@asu.edu	Isabelle Dolce
-Kissa.Powell@asu.edu	Jesse Holschbach
-Kissa.Powell@asu.edu	Joseph May
-Kissa.Powell@asu.edu	Karen Montemayor
-Kissa.Powell@asu.edu	Lisa Epstein
-Kissa.Powell@asu.edu	Melinda Chiodi
-Kissa.Powell@asu.edu	Michelle Ponce de Leon
-Kissa.Powell@asu.edu	Rhett Etherton
-Kissa.Powell@asu.edu	Tara Johnson
-Kissa.Powell@asu.edu	Will Cobb
-Mini.Philip@asu.edu	Aaron Brewster
-Mini.Philip@asu.edu	Ai Baba
-Mini.Philip@asu.edu	Cassandra Threadgill
-Mini.Philip@asu.edu	Dalilah Diaz
-Mini.Philip@asu.edu	Danyra Varela
-Mini.Philip@asu.edu	Jamie Morgan
-Mini.Philip@asu.edu	Jeff Barber
-Mini.Philip@asu.edu	Kaitlyn Vanklompenberg
-Mini.Philip@asu.edu	Kenia Marquez
-Mini.Philip@asu.edu	Omar Davidson
-Mini.Philip@asu.edu	Sarah Fossgreen
-Mini.Philip@asu.edu	Todd Butler
-Nicholas.Griesbeck@asu.edu	Eleanor Barton
-Nicholas.Griesbeck@asu.edu	Felecia O'Neal
-Nicholas.Griesbeck@asu.edu	Jill Atwood
-Nicholas.Griesbeck@asu.edu	Katrina Vollmer
-Nicholas.Griesbeck@asu.edu	Michael Hagan
-Nicholas.Griesbeck@asu.edu	Michael Moody
-Nicholas.Griesbeck@asu.edu	Michaela Owen
-Nicholas.Griesbeck@asu.edu	Nino Ivanovich
-S.sanchez@asu.edu	Callan Christy
-S.sanchez@asu.edu	Carol Albidrez
-S.sanchez@asu.edu	Chris Kozma
-S.sanchez@asu.edu	Cindy Auclair
-S.sanchez@asu.edu	Denice Diab
-S.sanchez@asu.edu	Heather Bennett
-S.sanchez@asu.edu	Joe Leavell
-S.sanchez@asu.edu	Liliana Diaz
-Tristan.Fronce@asu.edu	Christina Sterling
-Tristan.Fronce@asu.edu	Crystal Mitchell
-Tristan.Fronce@asu.edu	Daniela Moreno Diaz
-Tristan.Fronce@asu.edu	Hilary Yastrum
-Tristan.Fronce@asu.edu	Jacob Hahn
-Tristan.Fronce@asu.edu	John Abel
-Tristan.Fronce@asu.edu	Lauren Lee
-Tristan.Fronce@asu.edu	Latessa "Tessa" Oshe
-Tristan.Fronce@asu.edu	Stephanie Embery
-Tristan.Fronce@asu.edu	Stephanie Fedy
-Tristan.Fronce@asu.edu	Vanessa Pablo
+Benhar
+COI
+COI
+COI
+COI
+Mobel 360
+WR Canada
+HM Brazil 
+HM Mexico
+HM Mexico
+A O I
+A O I
+APG
+APG
+APG
+APG
+APG
+BSI
+BSI
+Continental Office
+Continental Office
+Continental Office
+HM Services
+I D & A
+I D & A
+I D & A
+Industries for the Blind
+Intereum
+Interior Investments
+Interior Investments
+Interior Investments
+Interior Investments
+Jamco
+Jamco
+Jamco
+Jamco
+MarxModa
+MarxModa
+Office Interiors
+OfficeWorks
+OP
+Pigott
+Pigott
+Pigott
+Pigott
+Pigott
+Thomas Interiors
+Thomas Interiors
+Trellis Partners
+Trellis Partners
+Trellis Partners
+Widmer
+Widmer
+Widmer
+WR Central
+WR Central
+WR Central
+Accent
+Alfred Williams
+Alfred Williams
+Alfred Williams
+Alfred Williams
+Alfred Williams
+Alfred Williams
+Alfred Williams
+Alfred Williams
+American Office
+American Office
+American Office
+American Office
+American Office
+American Office
+American Office
+Bialek
+Bialek
+COP
+COP
+COP
+COP
+COP
+COP
+COP
+COP
+Corporate Environments
+Corporate Environments
+CWC
+CWC
+CWC
+govSolutions
+Millington Lockwood
+Office Environments
+Office Environments
+Office Environments
+Office Environments
+Office Environments
+OFI
+OFI
+Premier
+Sedgwick
+Sedgwick
+Spectrum
+Stamford Office
+SupplySource
+SupplySource
+SupplySource
+SupplySource
+Workspaces
+Workspaces
+Workspaces
+Workspaces
+Wrk Lab
+BiNW
+Catalyst
+Catalyst
+Company
+CRI
+Facility Designs
+GM
+GM
+GM
+GM
+Goodmans
+Goodmans
+Goodmans
+HB
+HB
+HB
+HB
+HB
+Innovative Business
+M3 Office
+MBI
+MTA
+PacificWRO
+PacificWRO
+Pivot Interiors
+Pivot Interiors
+Pivot Interiors
+Pivot Interiors
+Pivot Interiors
+Pivot Interiors
+Sheridan
+Sheridan
+Sheridan
+Trope
+WR Colorado
+WR Colorado
+WRG
+WRG

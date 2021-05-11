@@ -6,6 +6,7 @@ let us = require('./modules/updateUsers');
 let ua = require('./modules/updateAnswers');
 let ipc = require('./modules/insertPubCode');
 let gi = require('./modules/generalInsert');
+let rd = require('./modules/removeDuplicates');
 let chosenModule = process.argv.slice(2).toString();
 
 function printer(e) {
@@ -57,9 +58,12 @@ function nodeScripter(module) {
         case 'update-answers':
             printer(ua.updateAnswers);
             break;
-            case 'general-insert':
-                printer(gi.generalInsert);
-                break;
+        case 'general-insert':
+            printer(gi.generalInsert);
+            break;
+        case 'remove-duplicates':
+            printer(rd.removeDuplicates);
+            break;
         default:
             console.log('Please enter a valid module name');        
     }
