@@ -2,14 +2,15 @@ exports.removeDuplicates = {
   values: [],
   assambler: (e)  => {
       let sample = e.values;
+      let filtered = [];
       let result = [];
 
       sample.forEach(x => {
-        if(!result.includes(x)) result.push(x);
+        if(!filtered.includes(x)) filtered.push(x);
       });
 
-      let r = result.join('\n')
+      filtered.forEach(x => result.push(x + "\n"))
 
-      return r
+      return result
   },
 }
