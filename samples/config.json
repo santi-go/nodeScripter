@@ -1,0 +1,8 @@
+{
+    "sections":[
+        "(@SiteID, 0, '2021-05-01 00:00:00.000', '2021-05-01 00:00:00.000', N'",
+        "', N'",
+        "', N'franchisee', 1, 0, 0, 0, N'district', 0),\n"
+    ],
+    "order":"sections[0] + el[0] + sections[1] + el[1] + sections[2]"
+}
